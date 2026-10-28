@@ -1,0 +1,87 @@
+{
+  "manifest_version": 3,
+  "name": "Preview",
+  "version": "1.0.0",
+  "description": "Instant link preview in a floating popup or sidebar with zoom and quick controls",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "preview@tkno",
+      "strict_min_version": "115.0"
+    }
+  },
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_title": "Preview",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ]
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "declarativeNetRequest",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "sidebar_action": {
+    "default_title": "Preview - Slide Bar",
+    "default_panel": "sidepanel/sidepanel.html",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules/rules.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content/*",
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

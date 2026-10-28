@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview - Slide Bar</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  <div class="sp-container">
+
+    <!-- Loading Spinner -->
+    <div class="sp-loader sp-hidden" id="sp-loader">
+      <div class="sp-spinner"></div>
+      <span>Loading preview...</span>
+    </div>
+
+    <!-- Empty State (Shown before any link is previewed) -->
+    <div class="sp-empty-state" id="sp-empty-state">
+      <div class="sp-empty-icon">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8">
+          <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+          <path d="M9 3v18"></path>
+          <path d="M15 9l-3 3 3 3"></path>
+        </svg>
+      </div>
+      <h3>Slide Bar Preview</h3>
+      <p>Hold <strong>S</strong> + Right-Click any link on a page to preview it here seamlessly.</p>
+    </div>
+
+    <!-- Edge-to-Edge Pure Webpage Iframe -->
+    <div class="sp-iframe-container" id="sp-iframe-container">
+      <iframe id="sp-iframe" class="sp-iframe"></iframe>
+    </div>
+
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>

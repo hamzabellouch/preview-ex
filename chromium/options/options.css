@@ -1,0 +1,175 @@
+/* options.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: #f1f5f9;
+  color: #0f172a;
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.opt-container {
+  width: 100%;
+  max-width: 580px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.opt-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.opt-logo {
+  width: 48px;
+  height: 48px;
+}
+
+.opt-header h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.opt-header p {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 2px;
+}
+
+.opt-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.opt-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 8px;
+}
+
+.opt-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.opt-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.opt-field select {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.opt-hint {
+  font-size: 11px;
+  color: #64748b;
+}
+
+.opt-checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.opt-checkbox-field input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.opt-btn-danger {
+  padding: 8px 14px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.15s ease;
+}
+
+.opt-btn-danger:hover {
+  background: #fecaca;
+}
+
+.opt-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.opt-btn-primary {
+  padding: 10px 24px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 9999px; /* Capsule shape */
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.opt-btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.opt-capsule-select {
+  padding: 8px 16px !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 9999px !important;
+  font-size: 13px !important;
+  background: #f8fafc !important;
+  color: #0f172a !important;
+  cursor: pointer !important;
+  outline: none !important;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%2364748b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 14px center !important;
+}
+
+.opt-capsule-select:focus {
+  border-color: #3b82f6 !important;
+}
+
+.opt-status {
+  font-size: 13px;
+  color: #10b981;
+  font-weight: 600;
+}

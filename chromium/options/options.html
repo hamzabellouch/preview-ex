@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="opt-container">
+    
+    <header class="opt-header">
+      <img src="../icons/icon-48.png" alt="Logo" class="opt-logo">
+      <div>
+        <h1>Settings</h1>
+        <p>Customize your preview preferences</p>
+      </div>
+    </header>
+
+    <div class="opt-card">
+      <div class="opt-section-title">Theme</div>
+
+      <div class="opt-field">
+        <label for="opt-theme">Theme Mode:</label>
+        <select id="opt-theme" class="opt-capsule-select">
+          <option value="default">Default</option>
+          <option value="light">Light Mode</option>
+          <option value="dark">Dark Mode</option>
+        </select>
+        <span class="opt-hint">Choose between Default (follows system), Light Mode, or Dark Mode.</span>
+      </div>
+
+      <div class="opt-checkbox-field">
+        <input type="checkbox" id="opt-blur" checked />
+        <label for="opt-blur">Enable backdrop blur on floating preview overlay</label>
+      </div>
+    </div>
+
+    <div class="opt-card">
+      <div class="opt-section-title">Privacy & History</div>
+      <p class="opt-hint" style="margin-bottom:12px;">Previewed link history is stored locally on your device only.</p>
+      <button id="opt-clear-history" class="opt-btn-danger">Clear Preview History 🗑️</button>
+    </div>
+
+    <div class="opt-footer">
+      <button id="opt-save-btn" class="opt-btn-primary">Save Preferences</button>
+      <span id="opt-status-msg" class="opt-status"></span>
+    </div>
+
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
